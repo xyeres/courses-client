@@ -1,6 +1,4 @@
-$Red: red;
-
-
-.red {
-  color: $Red;
-}
+@use 'base';
+@use 'components';
+@use 'abstracts';
+@use 'layouts';

@@ -1,0 +1,15 @@
+@use '../abstracts/typography';
+@use '../abstracts/colors';
+
+
+html {
+  font-size: typography.$BodyCopyFontSize;
+  font-family: typography.$BodyCopyFontFam, sans-serif;
+}
+
+body {
+  color: colors.$BodyFontColor;
+  background-image: url(../img/bg-mobile.png);
+  background-size: cover;
+  background-color: colors.$VeryDarkBlue;
+}
