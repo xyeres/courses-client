@@ -1,0 +1,24 @@
+@use '../abstracts/colors';
+
+.instruct {
+  margin: 2rem 0;
+  // padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+
+  &__img {
+    max-width: 40%;
+  }
+
+  &__text {
+    font-size: 1.35rem;
+    color: colors.$headingLight;
+  }
+
+  &__cta {
+    max-width: 50%;
+    padding-right: 1rem;
+  }
+}
