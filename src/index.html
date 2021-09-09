@@ -7,10 +7,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Client UI</title>
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/6562e0dbff.css">
 </head>
 
 <body>
-  <h1 class="red">Client</h1>
+  <div class="bgContainer bgContainer--header">
+    <div class="container container--featured">
+      <nav class="nav">
+        <div class="nav__logo">Courses</div>
+        <div class="user">
+          <!-- if Logge in -->
+          <div class="user__avatar"></div>
+          <!-- else -->
+          <div class="user__login"><a class="user__link" href="#">Create account</a></div>
+        </div>
+      </nav>
+      <header class="main">
+        <h1 class="heading heading--featured">Featured course</h1>
+
+        <div tabindex="0" class="card neonBlue">
+          <div class="details">
+            <div class="details__cost">Free</div>
+            <div class="details__title">Home Workout</div>
+            <div class="details__time">20 min</div>
+          </div>
+          <div class="card__picture">
+            <img src="img/courses/workout.png" alt="Home Workout">
+          </div>
+        </div>
+
+
+      </header>
+    </div>
+  </div>
+  <div class="container">
+    <main class="main">
+      <h3 class="heading heading--course">Popular</h3>
+      <div tabindex="0" class="card neonGreen">
+        <div class="details">
+          <div class="details__cost">Free</div>
+          <div class="details__title">Spanish Class</div>
+          <div class="details__time">90 min</div>
+        </div>
+        <div class="card__picture">
+          <img src="img/courses/book.png" alt="Spanish Class">
+        </div>
+      </div>
+
+      <div tabindex="0" class="card neonPurple featured">
+        <div class="details">
+          <div class="details__cost">Free</div>
+          <div class="details__title">Online Meditation Class</div>
+          <div class="details__time">40 hours</div>
+        </div>
+        <div class="card__picture">
+          <img src="img/courses/meditation.png" alt="meditation course">
+        </div>
+      </div>
+      <div tabindex="0" class="card neonOrange">
+        <div class="details">
+          <div class="details__cost">Free</div>
+          <div class="details__title">UI/UX Design</div>
+          <div class="details__time">92 hours</div>
+        </div>
+        <div class="card__picture">
+          <img src="img/courses/graph.png" alt="ui/ux design">
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="bgContainer bgContainer--instruct">
+    <aside class="instruct">
+      <img class="instruct__img" src="img/person.png" alt="person on a bean bag">
+      <div class="instruct__cta">
+        <h2 class="instruct__text">Do you want to be an instructor?</h2>
+        <a href="/signup" tabindex="0" role="button" class="btn btn-light">Start teaching</a>
+      </div>
+    </aside>
+  </div>
+  <div class="container">
+    <footer class="footer">
+      &copy;2021 Courses Inc.
+    </footer>
+  </div>
+
 </body>
 
 </html>
