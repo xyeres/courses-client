@@ -1,0 +1,32 @@
+@use '../abstracts/colors';
+@use '../abstracts/vars';
+
+.bgContainer {
+  padding: 1rem;
+
+  &--header {
+    background: url(../img/header-bg-40.jpg) no-repeat;
+    background-size: cover;
+    background-color: colors.$headingDark;
+  }
+
+  &--instruct {
+    margin: 1rem 0;
+    background-color: colors.$veryDarkGreen;
+  }
+}
+
+
+.container {
+  padding: 1.45rem 2rem;
+  width: 98%;
+  max-width: 375px;
+  margin: 0 auto;
+  background-color: colors.$headingLight;
+
+  &--featured {
+    background-color: unset;
+  }
+}
+
+// <a href="https://www.freepik.com/vectors/background">Background vector created by Harryarts - www.freepik.com</a>
