@@ -1,5 +1,286 @@
-.red {
-  color: red;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  font-size: 14px;
+  font-family: "Urbanist", sans-serif;
+}
+
+body {
+  color: #101010;
+  background-color: linear-gradiant(#fff, red);
+}
+
+a {
+  color: #0f2a21;
+}
+
+.btn {
+  font-weight: 700;
+  text-align: center;
+  color: #fdffff;
+  display: inline-block;
+  border: solid 2px #36adff;
+  background-color: #36adff;
+  padding: 0.25em 0.45em;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 90ms background-color ease-in-out;
+}
+.btn:hover {
+  background-color: unset;
+}
+.btn:focus {
+  outline: dashed 2px #fdffff;
+  border-color: #0f2a21;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+}
+.nav__logo {
+  font-weight: 900;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #fdffff;
+  background-color: #101010;
+  padding: 3px 7px;
+}
+.nav__logo::before {
+  content: url(../img/book.svg);
+  position: relative;
+  top: 4px;
+  padding-right: 5px;
+}
+
+.user__link {
+  font-weight: 900;
+  font-size: 0.89rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #101010;
+  background-color: #47ed9e;
+  border: solid 4px #47ed9e;
+  transition: 90ms background-color ease-in-out;
+  padding: 5px 8px;
+}
+.user__link:hover {
+  background-color: #fdffff;
+  border: solid 4px #47ed9e;
+  color: #101010;
+}
+
+.card {
+  background-color: #e7a6ff;
+  border-radius: 20px;
+  padding: 1.75rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 160ms transform ease-in;
+  cursor: pointer;
+}
+.card__picture {
+  max-width: 40%;
+}
+.card:hover {
+  transform: translate(-1px, -2px);
+  box-shadow: 1px 1px 3px 1px rgba(90, 90, 90, 0.2);
+}
+.card:focus {
+  outline: none;
+  border: solid 3px #fed23b;
+}
+
+.featured {
+  box-shadow: 1px 1px 5px 1px rgba(240, 49, 247, 0.1);
+  margin: 1.25rem 0;
+}
+
+.neonPurple {
+  background-color: #e7a6ff;
+}
+
+.neonGreen {
+  background-color: #47ed9e;
+}
+
+.neonBlue {
+  background-color: #36adff;
+}
+
+.neonOrange {
+  background-color: #ffc700;
+}
+
+.details {
+  max-width: 40%;
+  font-weight: 700;
+}
+.details__title {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.details__cost {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #fdffff;
+  margin-bottom: 0.5rem;
+}
+.details__time {
+  font-size: 0.65rem;
+  padding: 1px 4px;
+  color: #f1d2fc;
+  display: inline-block;
+  background-color: #101010;
+  border-radius: 20px;
+}
+.details__time::before {
+  content: "\f017";
+  font-family: FontAwesome;
+  padding-right: 4px;
+}
+
+.heading {
+  font-size: 0.95rem;
+  font-weight: 900;
+  margin: 0.75rem 0;
+}
+
+.heading--featured {
+  padding: 4px 7px;
+  display: inline-block;
+  font-size: 1.65rem;
+  color: #101010;
+  background-color: #fdffff;
+}
+
+.heading--course {
+  text-transform: uppercase;
+}
+
+.bgContainer {
+  padding: 1rem;
+}
+.bgContainer--header {
+  background: url(../img/header-bg-40.jpg) no-repeat;
+  background-size: cover;
+  background-color: #101010;
+}
+.bgContainer--instruct {
+  margin: 1rem 0;
+  background-color: #0f2a21;
+}
+
+.container {
+  padding: 1.45rem 2rem;
+  width: 98%;
+  max-width: 375px;
+  margin: 0 auto;
+  background-color: #fdffff;
+}
+.container--featured {
+  background-color: unset;
+}
+
+.instruct {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+.instruct__img {
+  max-width: 40%;
+}
+.instruct__text {
+  font-size: 1.35rem;
+  color: #fdffff;
+}
+.instruct__cta {
+  max-width: 50%;
+  padding-right: 1rem;
+}
+
+.footer {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
