@@ -112,6 +112,8 @@ a {
   justify-content: space-between;
   align-items: center;
   min-height: 50px;
+  padding-bottom: 0.7rem;
+  padding-bottom: 1.25rem;
 }
 .nav__logo {
   font-weight: 900;
@@ -236,9 +238,6 @@ a {
   text-transform: uppercase;
 }
 
-.bgContainer {
-  padding: 1rem;
-}
 .bgContainer--header {
   background: url(../img/header-bg-40.jpg) no-repeat;
   background-size: cover;
@@ -250,7 +249,7 @@ a {
 }
 
 .container {
-  padding: 1.45rem 2rem;
+  padding: 1.45rem;
   width: 98%;
   max-width: 375px;
   margin: 0 auto;
@@ -261,7 +260,8 @@ a {
 }
 
 .instruct {
-  margin: 2rem 0;
+  margin: 1.25 rem 0;
+  padding: 1.5rem 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
