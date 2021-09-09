@@ -4,12 +4,37 @@
 
 html {
   font-size: typography.$BodyCopyFontSize;
-  font-family: typography.$BodyCopyFontFam, sans-serif;
+  font-family: typography.$BodyCopyFontFam;
 }
 
 body {
   color: colors.$BodyFontColor;
-  background-image: url(../img/bg-mobile.png);
-  background-size: cover;
-  background-color: colors.$VeryDarkBlue;
+  background-color: linear-gradiant(#fff, red);
+}
+
+a {
+  color: colors.$veryDarkGreen;
+}
+
+.btn {
+  font-weight: 700;
+  text-align: center;
+  color: colors.$headingLight;
+  display: inline-block;
+  border: solid 2px colors.$neonBlue;
+  background-color: colors.$neonBlue;
+  padding: .25em .45em;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 90ms background-color ease-in-out;
+
+  &:hover {
+    background-color: unset;
+  }
+
+  &:focus {
+    outline: dashed 2px colors.$headingLight;
+    border-color: colors.$veryDarkGreen;
+  }
 }
