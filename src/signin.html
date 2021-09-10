@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client UI</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/6562e0dbff.css">
+</head>
+
+<body>
+  <div class="bgContainer bgContainer--header">
+    <div class="container container--featured">
+      <nav class="nav">
+        <a href="index.html" class="nav__logo">DIY Courses</a>
+        <div class="user">
+          <!-- if Logge in -->
+          <div class="user__avatar"></div>
+          <!-- else -->
+          <div class="user__login"><a class="user__link" href="#">Sign up</a></div>
+        </div>
+      </nav>
+      <header class="main">
+        <h1 class="heading heading--featured">Sign in</h1>
+        <form action="course.html">
+          <input type="text" name="username" id="userName" placeholder="Username">
+          <input type="password" name="password" id="password" placeholder="Password">
+          <button type="submit">Sign in</button>
+        </form>
+      </header>
+    </div>
+  </div>
+  <div class="container">
+    <main class="main">
+      <!-- TODO: might use this.. if not delete it! -->
+    </main>
+  </div>
+
+  <div class="bgContainer bgContainer--instruct">
+    <aside class="instruct">
+      <img class="instruct__img" src="img/person.png" alt="person on a bean bag">
+      <div class="instruct__cta">
+        <h2 class="instruct__text">Do you want to be an instructor?</h2>
+        <a href="/signup" tabindex="0" role="button" class="btn btn-light">Start teaching</a>
+      </div>
+    </aside>
+  </div>
+  <div class="container">
+    <footer class="footer">
+      &copy;2021 Courses Inc.
+    </footer>
+  </div>
+
+</body>
+
+</html>

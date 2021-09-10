@@ -84,6 +84,7 @@ body {
 
 a {
   color: #0f2a21;
+  text-decoration: none;
 }
 
 .btn {
@@ -96,7 +97,6 @@ a {
   padding: 0.25em 0.45em;
   margin: 0.5rem 0;
   cursor: pointer;
-  text-decoration: none;
   transition: 90ms background-color ease-in-out;
 }
 .btn:hover {
@@ -151,6 +151,7 @@ a {
   background-color: #e7a6ff;
   border-radius: 20px;
   padding: 1.75rem;
+  padding-bottom: calc(1.75rem + 3px);
   margin: 1rem 0;
   display: flex;
   align-items: center;
@@ -168,6 +169,7 @@ a {
 .card:focus {
   outline: none;
   border: solid 3px #fed23b;
+  padding-bottom: 1.75rem;
 }
 
 .featured {
@@ -239,7 +241,7 @@ a {
 }
 
 .bgContainer--header {
-  background: url(../img/header-bg-40.jpg) no-repeat;
+  background: url(../img/header-bg-40-gr.jpg) no-repeat;
   background-size: cover;
   background-color: #101010;
 }
@@ -277,6 +279,112 @@ a {
 .instruct__cta {
   max-width: 50%;
   padding-right: 1rem;
+}
+
+.courseContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.course {
+  max-width: 60%;
+  font-weight: 700;
+}
+.course__cost {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #fdffff;
+  margin-bottom: 0.5rem;
+}
+.course__title {
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+  background-color: #fdffff;
+  padding: 4px;
+  display: inline-block;
+  text-align: left;
+}
+.course__author {
+  display: inline-block;
+  background-color: #fdffff;
+  font-size: 1rem;
+  padding: 4px;
+}
+.course__time {
+  font-size: 0.65rem;
+  padding: 1px 4px;
+  color: #f1d2fc;
+  display: inline-block;
+  background-color: #101010;
+  border-radius: 20px;
+}
+.course__time::before {
+  content: "\f017";
+  font-family: FontAwesome;
+  padding-right: 4px;
+}
+.course__picture {
+  max-width: 30%;
+  padding-left: 0.5rem;
+}
+.course__controls {
+  padding-top: 1rem;
+}
+.course__controls a {
+  color: #fdffff;
+  font-weight: 500;
+  font-size: 0.89rem;
+}
+.course__controls .delete::before {
+  padding-right: 3px;
+  content: "\f1f8";
+  font-family: FontAwesome;
+}
+.course__controls .edit::before {
+  padding-right: 3px;
+  content: "\f044";
+  font-family: FontAwesome;
+}
+
+.description__title {
+  font-size: 1.75rem;
+}
+.description__text {
+  font-size: 1.025rem;
+}
+
+.time {
+  max-height: 120px;
+  margin: 1rem 0;
+  padding: 1rem;
+  color: #fdffff;
+  background-color: #36adff;
+}
+.time__timeCount {
+  font-weight: 900;
+  color: #101010;
+  text-transform: uppercase;
+}
+
+.materials__title {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.materials ul {
+  padding-left: 0;
+}
+.materials li {
+  list-style: none;
+  font-size: 1.25rem;
+}
+.materials li::before {
+  content: "\f18e";
+  color: #101010;
+  font-family: FontAwesome;
+  padding-right: 4px;
 }
 
 .footer {

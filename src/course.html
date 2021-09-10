@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client UI - course detail</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/6562e0dbff.css">
+</head>
+
+<body>
+  <div class="neonBlue">
+    <div class="container container--featured">
+      <nav class="nav">
+        <a href="index.html" class="nav__logo">DIY Courses</a>
+        <div class="user">
+          <!-- if Logge in -->
+          <div class="user__avatar"></div>
+          <!-- else -->
+          <div class="user__login"><a class="user__link" href="#">Sign up</a></div>
+        </div>
+      </nav>
+
+      <!-- <div class="arrow"><a href="index.html">courses</a></div> -->
+
+      <header class="courseContainer">
+        <div class="course">
+          <div class="course__cost">Free</div>
+          <div class="course__title">Home Workout</div>
+          <div class="course__author">Jane R. Smith</div>
+          <div class="course__time">20 min</div>
+          <div class="course__controls">
+            <a class="edit" href="edit.html">Edit</a>
+            <a class="delete" href="edit.html">Delete</a>
+          </div>
+        </div>
+        <div class="course__picture">
+          <img src="img/courses/workout.png" alt="Home Workout">
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="container">
+    <main class="courseDetails">
+      <div class="descriptionContainer">
+        <div class="description">
+          <h3 class="description__title">What you will learn:</h3>
+          <div class="description__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem ab ducimus
+            laborum optio suscipit ullam magnam, consequatur incidunt, temporibus ea eius rem, veritatis deserunt
+            veniam!
+          </div>
+        </div>
+        <div class="time">
+          <div class="time__title">Estimated time:</div>
+          <div class="time__timeCount">12 hours</div>
+        </div>
+      </div>
+      <div class="materials">
+        <div class="materials__title">Required Items</div>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+          <li>Item 5</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+
+  <div class="container">
+    <footer class="footer">
+      &copy;2021 Courses Inc.
+    </footer>
+  </div>
+
+</body>
+
+</html>
