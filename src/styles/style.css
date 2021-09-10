@@ -87,6 +87,10 @@ a {
   text-decoration: none;
 }
 
+.dangerText {
+  color: #ff4a35;
+}
+
 .btn {
   font-weight: 700;
   text-align: center;
@@ -105,6 +109,22 @@ a {
 .btn:focus {
   outline: dashed 2px #fdffff;
   border-color: #0f2a21;
+}
+.btn__danger {
+  background-color: #ff4a35;
+  border-color: #ff4a35;
+}
+.btn__danger:hover {
+  background-color: #af2e01;
+  border-color: #af2e01;
+}
+.btn__cancel {
+  background-color: #fdffff;
+  color: #101010;
+}
+.btn__cancel:hover {
+  color: #fdffff;
+  background-color: #36adff;
 }
 
 .nav {
@@ -211,7 +231,7 @@ a {
 .details__time {
   font-size: 0.65rem;
   padding: 1px 4px;
-  color: #f1d2fc;
+  color: #fdffff;
   display: inline-block;
   background-color: #101010;
   border-radius: 20px;
@@ -236,13 +256,23 @@ a {
   background-color: #fdffff;
 }
 
+.heading--subtitle {
+  font-size: 1.125rem;
+  background-color: #fdffff;
+  padding: 4px 7px;
+  font-weight: 700;
+}
+
 .heading--course {
+  margin-top: 0;
   text-transform: uppercase;
 }
 
 .bgContainer--header {
+  min-height: 12rem;
   background: url(../img/header-bg-40-gr.jpg) no-repeat;
   background-size: cover;
+  background-position: bottom;
   background-color: #101010;
 }
 .bgContainer--instruct {
@@ -258,6 +288,10 @@ a {
   background-color: #fdffff;
 }
 .container--featured {
+  background-color: unset;
+  padding-bottom: 0;
+}
+.container--course {
   background-color: unset;
 }
 
@@ -284,6 +318,7 @@ a {
 .courseContainer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: nowrap;
   align-items: center;
   width: 100%;
   margin: 1rem 0;
@@ -313,10 +348,13 @@ a {
   font-size: 1rem;
   padding: 4px;
 }
+.course__timeContainer {
+  margin-top: 7px;
+}
 .course__time {
   font-size: 0.65rem;
   padding: 1px 4px;
-  color: #f1d2fc;
+  color: #fdffff;
   display: inline-block;
   background-color: #101010;
   border-radius: 20px;
@@ -335,8 +373,18 @@ a {
 }
 .course__controls a {
   color: #fdffff;
-  font-weight: 500;
-  font-size: 0.89rem;
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+.course__controls a:hover {
+  font-weight: 700;
+}
+.course__controls a:focus {
+  outline: dashed 2px #fdffff;
+  outline-offset: 2px;
+}
+.course__controls a + a {
+  margin-left: 5px;
 }
 .course__controls .delete::before {
   padding-right: 3px;
@@ -345,6 +393,7 @@ a {
 }
 .course__controls .edit::before {
   padding-right: 3px;
+  padding-top: 2px;
   content: "\f044";
   font-family: FontAwesome;
 }
@@ -385,6 +434,68 @@ a {
   color: #101010;
   font-family: FontAwesome;
   padding-right: 4px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form__input {
+  display: block;
+  padding: 9px;
+  border: solid 1px #bebcc6;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  outline: none;
+}
+.form__error {
+  background-color: #fff2f2;
+  color: #af2e01;
+  border-color: #af2e01;
+}
+.form__input:focus {
+  border-color: #ffc700;
+}
+.form__btn {
+  display: block;
+  margin-top: 0;
+  text-transform: uppercase;
+  background-color: #ffc700;
+  border-color: #ffc700;
+}
+.form__btn:hover {
+  color: #101010;
+}
+.form__message {
+  margin-top: 1.75rem;
+  padding-top: 1rem;
+  border-top: dashed 1px #c6d5d0;
+}
+.form__message a {
+  color: #ffc700;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: 30ms all ease-in;
+}
+.form__message a:hover {
+  text-decoration: none;
+  background-color: #47ed9e;
+  color: #101010;
+  padding: 4px;
+}
+
+.errors__title {
+  font-weight: 700;
+}
+.errors__list {
+  list-style: none;
+  padding-left: 10px;
+}
+.errors__item::before {
+  content: "\f06a";
+  font-family: FontAwesome;
+  padding-right: 4px;
+  color: #ff4a35;
 }
 
 .footer {

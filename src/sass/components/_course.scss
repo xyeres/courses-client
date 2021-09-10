@@ -4,6 +4,7 @@
 .courseContainer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: nowrap;
   align-items: center;
   width: 100%;
   margin: 1rem 0;
@@ -58,10 +59,14 @@
     padding: 4px;
   }
 
+  &__timeContainer {
+    margin-top: 7px;
+  }
+
   &__time {
     font-size: .65rem;
     padding: 1px 4px;
-    color: colors.$neonPurpleAccent;
+    color: colors.$headingLight;
     display: inline-block;
     background-color: colors.$darkElementBackground;
     border-radius: vars.$globalBorderRadius;
@@ -83,8 +88,22 @@
 
     a {
       color: colors.$headingLight;
-      font-weight: 500;
-      font-size: 0.89rem;
+      font-weight: normal;
+      font-size: 0.8rem;
+
+      &:hover {
+        font-weight: 700;
+      }
+
+      &:focus {
+        outline: dashed 2px colors.$headingLight;
+        outline-offset: 2px;
+      }
+    }
+
+
+    a+a {
+      margin-left: 5px;
     }
 
     .delete::before {
@@ -95,14 +114,12 @@
 
     .edit::before {
       padding-right: 3px;
+      padding-top: 2px;
       content: '\f044';
       font-family: FontAwesome;
     }
   }
 }
-
-.courseDetail {}
-
 
 .description {
 

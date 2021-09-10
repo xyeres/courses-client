@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+.dangerText {
+  color: colors.$brightRed;
+}
+
 .btn {
   font-weight: 700;
   text-align: center;
@@ -36,5 +40,25 @@ a {
   &:focus {
     outline: dashed 2px colors.$headingLight;
     border-color: colors.$veryDarkGreen;
+  }
+
+  &__danger {
+    background-color: colors.$brightRed;
+    border-color: colors.$brightRed;
+
+    &:hover {
+      background-color: colors.$clayRed;
+      border-color: colors.$clayRed;
+    }
+  }
+
+  &__cancel {
+    background-color: colors.$headingLight;
+    color: colors.$headingDark;
+
+    &:hover {
+      color: colors.$headingLight;
+      background-color: colors.$neonBlue;
+    }
   }
 }
