@@ -12,18 +12,18 @@ export default function Header({ course }) {
     const authUser = context.authenticatedUser;
 
     return (
-        <div class="courseHeader neonBlue">
-            <header class="container">
-                <div class="course">
-                    <div class="course__cost">Free</div>
-                    <div class="course__title">Home Workout</div>
-                    <div class="course__author">Jane R. Smith</div>
-                    <div class="course__timeContainer">
-                        <div class="course__time">20 min</div>
+        <div className="courseHeader neonBlue">
+            <header className="container">
+                <div className="course">
+                    <div className="course__cost">Free</div>
+                    <div className="course__title">Home Workout</div>
+                    <div className="course__author">Jane R. Smith</div>
+                    <div className="course__timeContainer">
+                        <div className="course__time">20 min</div>
                     </div>
-                    <div class="course__controls">
-                        <a class="edit" href="edit.html">Edit</a>
-                        <a class="delete" href="delete.html">Delete</a>
+                    <div className="course__controls">
+                        <a className="edit" href="edit.html">Edit</a>
+                        <a className="delete" href="delete.html">Delete</a>
                     </div>
                 </div>
             </header>

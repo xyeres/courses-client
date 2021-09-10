@@ -71,8 +71,8 @@ export default function UserSignUp() {
 
     return (
         <main className="container">
-            <h1 class="heading heading--featured">Sign up</h1>
-            <p class="heading--subtitle">You're moments away from learning just about anything...</p>
+            <h1 className="heading heading--featured">Sign up</h1>
+            <p className="heading--subtitle">You're moments away from learning just about anything...</p>
 
             <Form
                 cancel={cancel}

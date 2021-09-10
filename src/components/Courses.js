@@ -46,20 +46,20 @@ export default function Courses() {
                     <p>Loading courses...</p>
                     :
                     <>
-                        <h1 class="heading heading--featured">Featured course</h1>
+                        <h1 className="heading heading--featured">Featured course</h1>
                         <Link to="/courses/1">
-                            <div tabIndex="0" class="card neonBlue">
-                                <div class="details">
-                                    <div class="details__cost">Free</div>
-                                    <div class="details__title">Sitting workout</div>
-                                    <div class="details__time">20 min</div>
+                            <div tabIndex="0" className="card neonBlue">
+                                <div className="details">
+                                    <div className="details__cost">Free</div>
+                                    <div className="details__title">Sitting workout</div>
+                                    <div className="details__time">20 min</div>
                                 </div>
-                                <div class="card__picture">
+                                <div className="card__picture">
                                     <img src={sittingWorkout} alt="Home Workout" />
                                 </div>
                             </div>
                         </Link>
-                        <h3 class="heading heading--course">Most Popular</h3>
+                        <h3 className="heading heading--course">Most Popular</h3>
                         <CourseList data={data} />  <NewCourse />
                     </>
             }

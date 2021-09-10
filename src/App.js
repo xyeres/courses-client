@@ -28,7 +28,7 @@ const UserSignInWithContext = withContext(UserSignIn);
 function App() {
   return (
     <BrowserRouter>
-      <div class="bgContainer--header">
+      <div className="bgContainer--header">
         <Nav />
         <Switch>
           <Route exact path="/" component={Courses}></Route>

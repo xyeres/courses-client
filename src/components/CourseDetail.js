@@ -60,11 +60,11 @@ export default function CourseDetail(props) {
                         </div>
                     </header>
                 </div>
-                <main class="container courseContainer">
-                    <div class="descriptionContainer">
-                        <div class="description">
-                            <h3 class="description__title">What you will learn:</h3>
-                            <div class="description__text">
+                <main className="container courseContainer">
+                    <div className="descriptionContainer">
+                        <div className="description">
+                            <h3 className="description__title">What you will learn:</h3>
+                            <div className="description__text">
                                 <ReactMarkdown>
                                     {c.description}
                                 </ReactMarkdown>
@@ -72,16 +72,16 @@ export default function CourseDetail(props) {
                         </div>
                         {
                             c.estimatedTime ?
-                                <div class="time">
-                                    <div class="time__title">Estimated time:</div>
-                                    <div class="time__timeCount">{c.estimatedTime}</div>
+                                <div className="time">
+                                    <div className="time__title">Estimated time:</div>
+                                    <div className="time__timeCount">{c.estimatedTime}</div>
                                 </div>
                                 : null
                         }
                     </div>
                     {c.materialsNeeded ?
-                        <div class="materials">
-                            <div class="materials__title">Required items:</div>
+                        <div className="materials">
+                            <div className="materials__title">Required items:</div>
                             <ul>
                                 <ReactMarkdown>{c.materialsNeeded}</ReactMarkdown>
                             </ul>

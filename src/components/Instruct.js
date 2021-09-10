@@ -12,13 +12,13 @@ export default function Instruct() {
   return (
     <>
       {authUser ? null
-        : <div class="bgContainer bgContainer--instruct">
-          <div class="container">
-            <aside class="instruct">
-              <img class="instruct__img" src={personImage} alt="person on a bean bag" />
-              <div class="instruct__cta">
-                <h2 class="instruct__text">Do you want to be an instructor?</h2>
-                <Link to='/signup' tabIndex="0" role="button" class="btn btn-light">Start teaching</Link>
+        : <div className="bgContainer bgContainer--instruct">
+          <div className="container">
+            <aside className="instruct">
+              <img className="instruct__img" src={personImage} alt="person on a bean bag" />
+              <div className="instruct__cta">
+                <h2 className="instruct__text">Do you want to be an instructor?</h2>
+                <Link to='/signup' tabIndex="0" role="button" className="btn btn-light">Start teaching</Link>
               </div>
             </aside>
           </div>

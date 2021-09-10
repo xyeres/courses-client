@@ -49,7 +49,7 @@ export default function ConfirmDelete(props) {
                     cancel={cancel}
                     errors={errors}
                     submit={submit}
-                    buttonClass="btn btn__danger"
+                    buttonclassName="btn btn__danger"
                     submitButtonText="Delete Course"
                     // send null elements so all there is a submit and cancel btn
                     elements={() => { return null }} />
