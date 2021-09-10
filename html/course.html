@@ -14,21 +14,19 @@
 </head>
 
 <body>
-  <div class="neonBlue">
-    <div class="container container--course">
-      <nav class="nav">
-        <a href="index.html" class="nav__logo">DIY Courses</a>
-        <div class="user">
-          <!-- if Logge in -->
-          <div class="user__avatar"></div>
-          <!-- else -->
-          <div class="user__login"><a class="user__link" href="signup.html">Sign up</a></div>
-        </div>
-      </nav>
+  <div class="bgContainer--header">
+    <nav class="container nav">
+      <a href="index.html" class="nav__logo">DIY Courses</a>
+      <div class="user">
+        <!-- if Logged in -->
+        <div class="user__name user__link"><a aria-label="Signout" href="signin.html">Michael</a></div>
+        <!-- else -->
+        <!-- <div class="user__login"><a class="user__link" href="signup.html">Sign up</a></div> -->
+      </div>
+    </nav>
 
-      <!-- <div class="arrow"><a href="index.html">courses</a></div> -->
-
-      <header class="courseContainer">
+    <div class="courseHeader neonBlue">
+      <header class="container">
         <div class="course">
           <div class="course__cost">Free</div>
           <div class="course__title">Home Workout</div>
@@ -41,18 +39,15 @@
             <a class="delete" href="delete.html">Delete</a>
           </div>
         </div>
-        <div class="course__picture">
-          <img src="img/courses/workout.png" alt="Home Workout">
-        </div>
       </header>
     </div>
-  </div>
-  <div class="container">
-    <main class="courseDetails">
+
+    <main class="container">
       <div class="descriptionContainer">
         <div class="description">
           <h3 class="description__title">What you will learn:</h3>
-          <div class="description__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem ab ducimus
+          <div class="description__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem ab
+            ducimus
             laborum optio suscipit ullam magnam, consequatur incidunt, temporibus ea eius rem, veritatis deserunt
             veniam!
           </div>
@@ -73,13 +68,14 @@
         </ul>
       </div>
     </main>
-  </div>
 
 
-  <div class="container">
-    <footer class="footer">
-      &copy;2021 Courses Inc.
-    </footer>
+
+    <div class="container">
+      <footer class="footer">
+        &copy;2021 Courses Inc.
+      </footer>
+    </div>
   </div>
 
 </body>

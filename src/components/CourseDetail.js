@@ -4,7 +4,6 @@ import { Link, useHistory } from 'react-router-dom'
 import { Context } from '../Context';
 import errorHandler from '../errorHandler';
 
-
 /**
   * Renders a course's full details, and will conditionally
   * render update and delete buttons if user has perms
@@ -33,56 +32,64 @@ export default function CourseDetail(props) {
         // Loop result and render course details
         <>{course.map(c => (
             <div key={c.title}>
-                <div className="actions--bar">
-                    <div className="wrap">
-                        {
-                            authUser ? // if the user is signed in...
-                                authUser.id === c.user.id ? // show update and delete btns if they are the course owner
-                                    <React.Fragment>
-                                        <Link className="button" to={`/courses/${c.id}/update`}>Update Course</Link>
-                                        <Link className="button" to={`${c.id}/delete`}>Delete Course</Link>
-                                    </React.Fragment>
+                <div className="neonBlue">
+                    <header className="container">
+                        <div className="course">
+                            <div className="course__cost">Free</div>
+                            <div className="course__title">{c.title}</div>
+                            <div className="course__inlineBlockContainer">
+                                <div className="course__author">{c.user.firstName} {c.user.lastName}</div>
+                            </div>
+                            {
+                                c.estimatedTime ?
+                                    <div className="course__timeContainer">
+                                        <div className="course__time">{c.estimatedTime}</div>
+                                    </div>
                                     : null
-                                : null
-                        }
-                        <Link className="button button-secondary" to="/">Return to List</Link>
-                    </div>
+                            }
+                            {
+                                authUser ?
+                                    authUser.id === c.user.id ? // show update and delete btns if they are the course owner
+                                        <div className="course__controls">
+                                            <Link className="edit" to={`/courses/${c.id}/update`}>Edit</Link>
+                                            <Link className="delete" to={`${c.id}/delete`}>Delete</Link>
+                                        </div>
+                                        : null
+                                    : null
+                            }
+                        </div>
+                    </header>
                 </div>
-                <div className="wrap">
-                    <h2>Course Detail</h2>
-                    <form>
-                        <div className="main--flex">
-                            <div>
-                                <h3 className="course--detail--title">Course</h3>
-                                <h4 className="course--name">{c.title}</h4>
-                                <p>By {c.user.firstName} {c.user.lastName}</p>
+                <main class="container courseContainer">
+                    <div class="descriptionContainer">
+                        <div class="description">
+                            <h3 class="description__title">What you will learn:</h3>
+                            <div class="description__text">
                                 <ReactMarkdown>
                                     {c.description}
                                 </ReactMarkdown>
                             </div>
-                            <div>
-                                {/* Not all courses have esitmated time so we check for it */}
-                                {c.estimatedTime ?
-                                    <>
-                                        <h3 className="course--detail--title">Estimated Time</h3>
-                                        <p>{c.estimatedTime}</p>
-                                    </>
-                                    : null}
-                                {c.materialsNeeded ?
-                                    <>
-                                        <h3 className="course--detail--title">Materials Needed</h3>
-                                        <ul className="course--detail--list">
-                                            <ReactMarkdown>{c.materialsNeeded}</ReactMarkdown>
-                                        </ul>
-                                    </>
-                                    : null}
-                            </div>
                         </div>
-                    </form>
-                </div>
+                        {
+                            c.estimatedTime ?
+                                <div class="time">
+                                    <div class="time__title">Estimated time:</div>
+                                    <div class="time__timeCount">{c.estimatedTime}</div>
+                                </div>
+                                : null
+                        }
+                    </div>
+                    {c.materialsNeeded ?
+                        <div class="materials">
+                            <div class="materials__title">Required items:</div>
+                            <ul>
+                                <ReactMarkdown>{c.materialsNeeded}</ReactMarkdown>
+                            </ul>
+                        </div>
+                        : null
+                    }
+                </main>
             </div>
-        ))
-        }
-        </>
+        ))}</>
     )
 }

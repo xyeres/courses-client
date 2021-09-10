@@ -152,7 +152,7 @@ a {
   padding: 3px 7px;
 }
 .nav__logo::before {
-  content: url(../img/book.svg);
+  content: url(../../img/book.svg);
   position: relative;
   top: 4px;
   padding-right: 5px;
@@ -185,7 +185,7 @@ a {
   min-height: 165px;
   max-height: 176px;
   background-color: #e7a6ff;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 1.75rem;
   padding-bottom: calc(1.75rem + 3px);
   margin: 1rem 0;
@@ -196,7 +196,7 @@ a {
   cursor: pointer;
 }
 .card__picture {
-  max-width: 42%;
+  max-width: 28%;
 }
 .card:hover {
   transform: translate(-1px, -2px);
@@ -249,7 +249,7 @@ a {
   color: #fdffff;
   display: inline-block;
   background-color: #101010;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .details__time::before {
   content: "\f017";
@@ -284,8 +284,8 @@ a {
 }
 
 .bgContainer--header {
-  min-height: 12rem;
-  background: url(../img/bg-1660.png) no-repeat;
+  max-height: 14rem;
+  background: url(../../img/bg-1660.png) no-repeat;
   background-size: cover;
   background-position: bottom;
   background-color: white;
@@ -297,14 +297,11 @@ a {
 
 .container {
   padding: 1.45rem;
-  width: 98%;
-  max-width: 375px;
+  max-width: 475px;
   margin: 0 auto;
-  background-color: #fdffff;
 }
 .container--featured {
   background-color: unset;
-  padding-bottom: 0;
 }
 .container--course {
   background-color: unset;
@@ -330,18 +327,20 @@ a {
   padding-right: 1rem;
 }
 
+.courseHeader {
+  min-height: 120px;
+}
+
 .courseContainer {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  align-items: center;
-  width: 100%;
-  margin: 1rem 0;
+  min-height: 50vh;
 }
 
 .course {
-  max-width: 60%;
+  max-width: 90%;
   font-weight: 700;
+}
+.course__inlineBlockContainer {
+  margin: 0;
 }
 .course__cost {
   font-size: 0.85rem;
@@ -372,7 +371,7 @@ a {
   color: #fdffff;
   display: inline-block;
   background-color: #101010;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .course__time::before {
   content: "\f017";
@@ -503,6 +502,12 @@ a {
   padding: 4px;
 }
 
+.errors {
+  margin: 1rem 0;
+  border: dashed 2px #ff4a35;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
 .errors__title {
   font-weight: 700;
 }

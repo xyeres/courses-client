@@ -3,8 +3,8 @@
 
 .bgContainer {
   &--header {
-    min-height: 12rem;
-    background: url(../img/bg-1660.png) no-repeat;
+    max-height: 14rem;
+    background: url(../../img/bg-1660.png) no-repeat;
     background-size: cover;
     background-position: bottom;
     background-color: white;
@@ -19,14 +19,11 @@
 
 .container {
   padding: 1.45rem;
-  width: 98%;
-  max-width: 375px;
+  max-width: 475px;
   margin: 0 auto;
-  background-color: colors.$headingLight;
 
   &--featured {
     background-color: unset;
-    padding-bottom: 0;
   }
 
   &--course {

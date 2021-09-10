@@ -1,18 +1,21 @@
 @use '../abstracts/colors';
 @use '../abstracts/vars';
 
+.courseHeader {
+  min-height: 120px;
+}
+
 .courseContainer {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  align-items: center;
-  width: 100%;
-  margin: 1rem 0;
+  min-height: 50vh;
 }
 
 .course {
-  max-width: 60%;
+  max-width: 90%;
   font-weight: 700;
+
+  &__inlineBlockContainer {
+    margin: 0;
+  }
 
   &__cost {
     font-size: .85rem;

@@ -73,57 +73,69 @@ export default function UpdateCourse(props) {
     }
 
     return (
-        <div className="wrap">
-            <h2>Create Course</h2>
-            <Form
-                cancel={cancel}
-                errors={errors}
-                submit={submit}
-                submitButtonText="Update Course"
-                elements={() => (
-                    <React.Fragment>
-                        <div className="main--flex">
-                            <div>
-                                <input
-                                    id="courseTitle"
-                                    name="courseTitle"
-                                    type="text"
-                                    value={title}
-                                    onChange={handleTitleChange}
-                                    placeholder="Title" />
-                                <input
-                                    id="courseAuthor"
-                                    name="courseAuthor"
-                                    type="text"
-                                    value={author}
-                                    disabled={true}
-                                    placeholder="Author" />
-                                <textarea
-                                    id="courseDescription"
-                                    name="courseDescription"
-                                    value={description}
-                                    onChange={handleDescriptionChange}
-                                    placeholder="Course Description" />
-                            </div>
-                            <div>
-                                <input
-                                    id="estimatedTime"
-                                    name="estimatedTime"
-                                    type="text"
-                                    value={time}
-                                    onChange={handleTimeChange}
-                                    placeholder="14 hours" />
-                                <textarea
-                                    id="materialsNeeded"
-                                    name="materialsNeeded"
-                                    type="password"
-                                    value={mats}
-                                    onChange={handleMatsChange}
-                                    placeholder="Materials Needed" />
-                            </div>
+        <>
+            <div className="courseHeader neonBlue">
+                <header className="container">
+                    <div className="course">
+                        <div className="course__title">{title ? `Update course` : `Create course`}</div>
+                        <div className="course__inlineBlockContainer">
+                            <div className="course__author">{title ? `Editing "${title}"` : 'Sharing your knowledge begins here'}</div>
                         </div>
-                    </React.Fragment>
-                )} />
-        </div>
+                    </div>
+                </header>
+            </div>
+            <main className="container">
+                <Form
+                    cancel={cancel}
+                    errors={errors}
+                    submit={submit}
+                    submitButtonText="Update Course"
+                    elements={() => (
+                        <>
+                            <input
+                                className="form__input"
+                                id="courseTitle"
+                                name="courseTitle"
+                                type="text"
+                                value={title}
+                                onChange={handleTitleChange}
+                                placeholder="Title" />
+                            <input
+                                className="form__input"
+                                id="courseAuthor"
+                                name="courseAuthor"
+                                type="text"
+                                value={author}
+                                disabled={true}
+                                placeholder="Author" />
+                            <textarea
+                                className="form__input"
+                                rows="15"
+                                id="courseDescription"
+                                name="courseDescription"
+                                value={description}
+                                onChange={handleDescriptionChange}
+                                placeholder="Course Description" />
+                            <input
+                                className="form__input"
+                                id="estimatedTime"
+                                name="estimatedTime"
+                                type="text"
+                                value={time}
+                                onChange={handleTimeChange}
+                                placeholder="Time to complete course (ie: 14 hours)" />
+                            <textarea
+                                className="form__input"
+                                rows="5"
+                                id="materialsNeeded"
+                                name="materialsNeeded"
+                                type="password"
+                                value={mats}
+                                onChange={handleMatsChange}
+                                placeholder="Materials Needed" />
+                        </>
+                    )} />
+            </main>
+        </>
     )
 }

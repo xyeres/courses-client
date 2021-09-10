@@ -4,10 +4,10 @@ import { Context } from '../Context';
 import errorHandler from '../errorHandler';
 import Form from './Form';
 
-  /**
-    * Very simple delete confirmation screen to check wether 
-    * user want's to actually delete the course
-  */
+/**
+  * Very simple delete confirmation screen to check wether 
+  * user want's to actually delete the course
+*/
 export default function ConfirmDelete(props) {
     const context = useContext(Context);
     const history = useHistory();
@@ -37,15 +37,23 @@ export default function ConfirmDelete(props) {
     }
 
     return (
-        <div className="form--centered">
-            <h2>Are you sure you'd like to delete this course?</h2>
-            <Form
-                cancel={cancel}
-                errors={errors}
-                submit={submit}
-                submitButtonText="Delete Course"
-                // send null elements so all there is a submit and cancel btn
-                elements={() => {return null}} /> 
+        <div className="container">
+            <header>
+                <h1 className="heading heading--featured"><i className="fa fa-exclamation-circle dangerText" aria-hidden="true"></i> Are
+                    you sure?
+                </h1>
+                <h2 className="heading heading--subtitle">Are you sure you want to delete the course?</h2>
+            </header>
+            <main>
+                <Form
+                    cancel={cancel}
+                    errors={errors}
+                    submit={submit}
+                    buttonClass="btn btn__danger"
+                    submitButtonText="Delete Course"
+                    // send null elements so all there is a submit and cancel btn
+                    elements={() => { return null }} />
+            </main>
         </div>
     );
 }

@@ -10,7 +10,14 @@ export default function Form(props) {
     submit,
     submitButtonText,
     elements,
+    buttonClass
   } = props;
+
+  let btnClass = 'btn form__btn';
+
+  if (buttonClass) {
+    btnClass = buttonClass
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -25,12 +32,10 @@ export default function Form(props) {
   return (
     <>
       <ErrorsDisplay errors={errors} />
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         {elements()}
-        <div className="pad-bottom">
-          <button className="button" type="submit">{submitButtonText}</button>
-          <button className="button button-secondary" onClick={handleCancel}>Cancel</button>
-        </div>
+        <button className={btnClass} type="submit">{submitButtonText}</button>
+        <button className="btn btn__cancel" onClick={handleCancel}>Cancel</button>
       </form>
     </>
   );

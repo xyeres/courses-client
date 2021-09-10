@@ -70,8 +70,10 @@ export default function UserSignUp() {
     }
 
     return (
-        <div className="form--centered">
-            <h2>Sign Up</h2>
+        <main className="container">
+            <h1 class="heading heading--featured">Sign up</h1>
+            <p class="heading--subtitle">You're moments away from learning just about anything...</p>
+
             <Form
                 cancel={cancel}
                 errors={errors}
@@ -80,6 +82,7 @@ export default function UserSignUp() {
                 elements={() => (
                     <React.Fragment>
                         <input
+                            className="form__input"
                             id="firstName"
                             name="firstName"
                             type="text"
@@ -87,6 +90,7 @@ export default function UserSignUp() {
                             onChange={handleFirstNameChange}
                             placeholder="First Name" />
                         <input
+                            className="form__input"
                             id="lastName"
                             name="lastName"
                             type="text"
@@ -94,13 +98,15 @@ export default function UserSignUp() {
                             onChange={handleLastNameChange}
                             placeholder="Last Name" />
                         <input
+                            className="form__input"
                             id="emailAddress"
                             name="emailAddress"
-                            type="text"
+                            type="email"
                             value={emailAddress}
                             onChange={handleEmailChange}
                             placeholder="Email Address" />
                         <input
+                            className="form__input"
                             id="password"
                             name="password"
                             type="password"
@@ -108,6 +114,7 @@ export default function UserSignUp() {
                             onChange={handlePasswordChange}
                             placeholder="Password" />
                         <input
+                            className="form__input"
                             id="passwordConfirm"
                             name="passwordConfirm"
                             type="password"
@@ -116,7 +123,7 @@ export default function UserSignUp() {
                             placeholder="Confirm Password" />
                     </React.Fragment>
                 )} />
-            <p>Already have a user account? Click here to <Link to="/signin">sign in</Link>!</p>
-        </div>
+            <div className="form__message">Already have an account? <Link to="/signin">Sign in!</Link></div>
+        </main>
     )
 }

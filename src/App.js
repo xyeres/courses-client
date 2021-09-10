@@ -6,7 +6,9 @@ import withContext from './Context';
 import PrivateRoute from './PrivateRoute';
 
 // *Components
-import Header from './components/Header';
+import Nav from './components/Nav';
+import Footer from './components/Footer';
+import Instruct from './components/Instruct';
 import Courses from './components/Courses';
 import CreateCourse from './components/CreateCourse';
 import UpdateCourse from './components/UpdateCourse';
@@ -26,8 +28,8 @@ const UserSignInWithContext = withContext(UserSignIn);
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <main>
+      <div class="bgContainer--header">
+        <Nav />
         <Switch>
           <Route exact path="/" component={Courses}></Route>
           <PrivateRoute path="/courses/create" component={CreateCourse}></PrivateRoute>
@@ -44,7 +46,10 @@ function App() {
           {/* 404 */}
           <Route render={() => <Redirect to={'/notfound'} />} />
         </Switch>
-      </main>
+        <Instruct />
+        <Footer />
+      </div>
+
     </BrowserRouter>
   );
 }
