@@ -1,0 +1,76 @@
+@use '../abstracts/colors';
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    display: block;
+    padding: 9px;
+    border: solid 1px colors.$inputBorder;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    outline: none;
+
+  }
+
+  &__error {
+    background-color: colors.$inputBackgroundError;
+    color: colors.$inputTextError;
+    border-color: colors.$inputTextError;
+  }
+
+  &__input:focus {
+    border-color: colors.$inputBorderFocus;
+  }
+
+  &__btn {
+    display: block;
+    margin-top: 0;
+    text-transform: uppercase;
+    background-color: colors.$neonOrange;
+    border-color: colors.$neonOrange;
+  }
+
+  &__btn:hover {
+    color: colors.$headingDark;
+  }
+
+  &__message {
+    margin-top: 1.75rem;
+    padding-top: 1rem;
+    border-top: dashed 1px colors.$lightGreen;
+
+    a {
+      color: colors.$neonOrange;
+      font-weight: 700;
+      text-decoration: underline;
+      transition: 30ms all ease-in;
+
+      &:hover {
+        text-decoration: none;
+        background-color: colors.$neonGreen;
+        color: colors.$headingDark;
+        padding: 4px;
+      }
+    }
+  }
+}
+
+.errors {
+  &__title {
+    font-weight: 700;
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 10px;
+  }
+
+  &__item::before {
+    content: '\f06a';
+    font-family: FontAwesome;
+    padding-right: 4px;
+    color: colors.$brightRed;
+  }
+}
