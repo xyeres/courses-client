@@ -26,6 +26,12 @@
 }
 
 .user {
+  &__name::after {
+    content: '\f08b';
+    font-family: FontAwesome;
+    padding-left: 4px;
+  }
+
   &__link {
     font-weight: 900;
     font-size: 0.89rem;
@@ -36,6 +42,7 @@
     border: solid 4px colors.$neonGreen;
     transition: 90ms background-color ease-in-out;
     padding: 5px 8px;
+    cursor: pointer;
   }
 
   &__link:hover {

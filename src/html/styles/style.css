@@ -158,6 +158,11 @@ a {
   padding-right: 5px;
 }
 
+.user__name::after {
+  content: "\f08b";
+  font-family: FontAwesome;
+  padding-left: 4px;
+}
 .user__link {
   font-weight: 900;
   font-size: 0.89rem;
@@ -168,6 +173,7 @@ a {
   border: solid 4px #47ed9e;
   transition: 90ms background-color ease-in-out;
   padding: 5px 8px;
+  cursor: pointer;
 }
 .user__link:hover {
   background-color: #fdffff;
