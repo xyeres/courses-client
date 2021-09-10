@@ -14,7 +14,7 @@
   cursor: pointer;
 
   &__picture {
-    max-width: 40%;
+    max-width: 42%;
   }
 
   &:hover {
@@ -26,17 +26,13 @@
     outline: none;
     border: solid 3px colors.$orange;
     padding-bottom: 1.75rem;
-
   }
 }
-
 
 .featured {
   box-shadow: 1px 1px 5px 1px rgba(240, 49, 247, 0.1);
   margin: 1.25rem 0;
 }
-
-
 
 .neonPurple {
   background-color: colors.$neonPurple;
@@ -55,7 +51,7 @@
 }
 
 .details {
-  max-width: 40%;
+  max-width: 45%;
   font-weight: 700;
 
   &__title {

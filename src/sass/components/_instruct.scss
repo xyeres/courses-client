@@ -9,7 +9,7 @@
   position: relative;
 
   &__img {
-    max-width: 40%;
+    max-width: min(40%, 240px);
   }
 
   &__text {

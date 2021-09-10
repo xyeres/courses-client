@@ -188,7 +188,7 @@ a {
   cursor: pointer;
 }
 .card__picture {
-  max-width: 40%;
+  max-width: 42%;
 }
 .card:hover {
   transform: translate(-1px, -2px);
@@ -222,7 +222,7 @@ a {
 }
 
 .details {
-  max-width: 40%;
+  max-width: 45%;
   font-weight: 700;
 }
 .details__title {
@@ -278,10 +278,10 @@ a {
 
 .bgContainer--header {
   min-height: 12rem;
-  background: url(../img/header-bg-40-gr.jpg) no-repeat;
+  background: url(../img/bg-1660.png) no-repeat;
   background-size: cover;
   background-position: bottom;
-  background-color: #101010;
+  background-color: white;
 }
 .bgContainer--instruct {
   margin: 1rem 0;
@@ -312,7 +312,7 @@ a {
   position: relative;
 }
 .instruct__img {
-  max-width: 40%;
+  max-width: min(40%, 240px);
 }
 .instruct__text {
   font-size: 1.35rem;
