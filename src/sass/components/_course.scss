@@ -10,28 +10,6 @@
   margin: 1rem 0;
 }
 
-// .arrow {
-//   font-size: 0.7rem;
-
-//   font-weight: 900;
-//   text-transform: uppercase;
-
-//   a,
-//   &::before {
-//     color: colors.$headingLight;
-//   }
-
-//   a:hover {
-//     text-decoration: underline;
-//   }
-
-//   &::before {
-//     content: '\f177';
-//     font-family: FontAwesome;
-//     padding-right: 4px;
-//   }
-// }
-
 .course {
   max-width: 60%;
   font-weight: 700;
@@ -138,8 +116,6 @@
   padding: 1rem;
   color: colors.$headingLight;
   background-color: colors.$neonBlue;
-
-  &__title {}
 
   &__timeCount {
     font-weight: 900;

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client UI - course detail</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/6562e0dbff.css">
+</head>
+
+<body>
+  <div class="neonBlue">
+    <div class="container container--course">
+      <nav class="nav">
+        <a href="index.html" class="nav__logo">DIY Courses</a>
+        <div class="user">
+          <!-- if Logge in -->
+          <div class="user__avatar"></div>
+          <!-- else -->
+          <div class="user__login"><a class="user__link" href="signup.html">Sign up</a></div>
+        </div>
+      </nav>
+      <header class="courseContainer">
+        <div class="course">
+          <div class="course__title">Update "Home workout"</div>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="container">
+    <main class="courseDetails">
+      <form action="course.html" class="courseForm form">
+        <div class="errors">
+          <p class="errors__title">Please fix the following errors:</p>
+          <ul class="errors__list">
+            <li class="errors__item">Title must be longer than 2 characters</li>
+            <li class="errors__item">Time to complete must not be blank</li>
+          </ul>
+        </div>
+        <label class="form__label errors__item" for="title">Title:</label>
+        <input class="form__input form__error courseForm__title" type="text" name="title" id="title"
+          value="Home workout">
+
+        <label class="form__label" for="author">Author:</label>
+        <input class="form__input courseForm__author" type="text" name="author" id="author" value="Jane R Smith">
+
+        <label class="form__label" for="courseDescription">Description:</label>
+        <textarea class="form__input" rows="15" id="courseDescription" name="courseDescription"
+          placeholder="Course Description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem ab ducimus laborum optio suscipit ullam magnam, consequatur incidunt, temporibus ea eius rem, veritatis deserunt veniam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem ab ducimus laborum optio suscipit ullam magnam, consequatur incidunt, temporibus ea eius rem, veritatis deserunt veniam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem ab ducimus laborum optio suscipit ullam magnam, consequatur incidunt, temporibus ea eius rem, veritatis deserunt veniam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem ab ducimus laborum optio suscipit ullam magnam, consequatur incidunt, temporibus ea eius rem, veritatis deserunt veniam!</textarea>
+
+        <label class="form__label errors__item" for="time">Time to complete:</label>
+        <input class="form__input courseForm__time form__error" type="text" name="time" id="time" value="90 min">
+
+        <label class="form__label" for="materialsNeeded">Materials needed:</label>
+        <textarea class="form__input" rows="5" name="materialsNeeded" id="materialsNeeded"
+          placeholder="Materials Needed">
+- asfasfsdaf
+- asfasf
+        </textarea>
+        <button class="btn btn__save" type="submit">Update</button>
+        <a role="button" class="btn btn__cancel" href="course.html" type="submit">Cancel</a>
+      </form>
+    </main>
+  </div>
+  <div class="container">
+    <footer class="footer">
+      &copy;2021 Courses Inc.
+    </footer>
+  </div>
+
+</body>
+
+</html>

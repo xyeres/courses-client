@@ -110,6 +110,14 @@ a {
   outline: dashed 2px #fdffff;
   border-color: #0f2a21;
 }
+.btn__save {
+  background-color: #47ed9e;
+  border-color: #47ed9e;
+}
+.btn__save:hover {
+  background-color: #fdffff;
+  color: #101010;
+}
 .btn__danger {
   background-color: #ff4a35;
   border-color: #ff4a35;
@@ -439,6 +447,10 @@ a {
 .form {
   display: flex;
   flex-direction: column;
+}
+.form__label {
+  padding-bottom: 0.4rem;
+  font-weight: 700;
 }
 .form__input {
   display: block;

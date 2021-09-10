@@ -4,6 +4,11 @@
   display: flex;
   flex-direction: column;
 
+  &__label {
+    padding-bottom: 0.4rem;
+    font-weight: 700;
+  }
+
   &__input {
     display: block;
     padding: 9px;
