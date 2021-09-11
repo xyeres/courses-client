@@ -1,2 +1,7 @@
+## Courses client
+Frontend client built in React for my [Courses REST API](https://github.com/xyeres/courses-api)
+
+![](./screenshot.png)
+
 Attributions: 
-<a href="https://www.freepik.com/vectors/background">Background vector created by Harryarts - www.freepik.com</a>
+Background vector created by Harryarts - www.freepik.com
