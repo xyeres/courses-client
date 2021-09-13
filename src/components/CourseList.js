@@ -9,7 +9,7 @@ import NoCourses from './NoCourses'
 export default function CourseList(props) {
     let courses;
     const results = props.data;
-    if (results.length) {
+    if (results.length > 0) {
         courses = results.map(c => <Course key={c.id} course={c} />);
     } else {
         courses = <NoCourses />;

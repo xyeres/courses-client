@@ -43,6 +43,7 @@ export default function CourseDetail(props) {
                             <div className="details">
                                 <div className="course__cost">Free</div>
                                 <div className="course__title">{c.title}</div>
+                                <div className='flex-break'></div>
                                 <div className="course__author">{c.user.firstName} {c.user.lastName}</div>
                                 {
                                     c.estimatedTime ?

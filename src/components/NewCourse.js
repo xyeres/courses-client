@@ -8,7 +8,7 @@ export default function NewCourse(props) {
 
     return (
         <Link to="/courses/create">
-            <div tabIndex="0" className="card neonPurple">
+            <div tabIndex="0" className="card veryDarkGreen">
                 <div className="details--max-width details">
 
                     <div className="details__title">

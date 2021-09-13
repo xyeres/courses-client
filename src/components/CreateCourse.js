@@ -58,7 +58,7 @@ export default function CreateCourse() {
     return (
         <>
             <div className="courseHeader neonBlue">
-                <header className="container">
+                <header className="container desktopContainer">
                     <div className="course">
                         <div className="course__title">Create course</div>
                         <div className="flex-break"></div>
@@ -66,7 +66,7 @@ export default function CreateCourse() {
                     </div>
                 </header>
             </div>
-            <main className="container">
+            <main className="container desktopContainer">
                 <Form
                     cancel={cancel}
                     errors={errors}

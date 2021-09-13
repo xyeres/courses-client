@@ -11,7 +11,7 @@
 }
 
 @mixin for-tablet-portrait-up {
-  @media (min-width: 925px) {
+  @media (min-width: 850px) {
     @content;
   }
 }

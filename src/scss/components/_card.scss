@@ -2,8 +2,7 @@
 @use '../abstracts/vars';
 
 .card {
-  min-height: 165px;
-  max-height: 176px;
+  height: 169px;
   background-color: colors.$neonPurple;
   border-radius: vars.$globalBorderRadius;
   padding: 1.75rem;
@@ -29,12 +28,14 @@
     border: solid 3px colors.$orange;
     padding-bottom: 1.75rem;
   }
+
+  &--featured {
+    box-shadow: 1px 1px 5px 1px rgba(240, 49, 247, 0.1);
+    margin: 1.25rem 0;
+  }
 }
 
-.featured {
-  box-shadow: 1px 1px 5px 1px rgba(240, 49, 247, 0.1);
-  margin: 1.25rem 0;
-}
+
 
 .neonPurple {
   background-color: colors.$neonPurple;
@@ -46,6 +47,11 @@
 
 .neonBlue {
   background-color: colors.$neonBlue;
+}
+
+.veryDarkGreen {
+  color: colors.$headingLight;
+  background-color: colors.$veryDarkGreen;
 }
 
 .neonOrange {

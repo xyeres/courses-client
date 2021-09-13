@@ -67,8 +67,11 @@ export default function Courses() {
                         <h1 className="heading heading--featured">Featured course</h1>
                         <CourseList data={dataFeatured} />
                         <h3 className="heading heading--course">Most Popular</h3>
-                        <CourseList data={data} />
-                        <NewCourse />
+                        <div className="courseContainer">
+                            <CourseList data={data} />
+                            <div className="flex-break"></div>
+                            <NewCourse />
+                        </div>
                     </>
             }
         </main>

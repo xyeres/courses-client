@@ -37,7 +37,7 @@ export default function ConfirmDelete(props) {
     }
 
     return (
-        <div className="container">
+        <div className="container desktopContainer">
             <header>
                 <h1 className="heading heading--featured"><i className="fa fa-exclamation-circle dangerText" aria-hidden="true"></i> Are
                     you sure?

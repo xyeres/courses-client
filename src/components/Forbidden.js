@@ -6,7 +6,7 @@ import FourOhFourImage from '../img/courses/svgs/hacker-60b6.svg'
 */
 export default function Forbidden() {
     return (
-        <div className="container flex-center">
+        <div className="container desktopContainer flex-center">
             <img width="450" height="auto" src={FourOhFourImage} alt="Hacker at a computer with glasses" />
             <h1>You're not authorized to do that.</h1>
         </div>

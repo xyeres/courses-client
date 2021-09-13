@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-import defaultCourseImage from '../img/courses/svgs/newideas-60b6.svg';
 /**
   * Course fragment for main courses page
 */

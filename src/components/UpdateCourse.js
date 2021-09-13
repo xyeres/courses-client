@@ -75,7 +75,7 @@ export default function UpdateCourse(props) {
     return (
         <>
             <div className="courseHeader neonBlue">
-                <header className="container">
+                <header className="container desktopContainer">
                     <div className="course">
                         <div className="course__title">{title ? `Update course` : `Create course`}</div>
                         <div className="flex-break"></div>
@@ -83,7 +83,7 @@ export default function UpdateCourse(props) {
                     </div>
                 </header>
             </div>
-            <main className="container">
+            <main className="container desktopContainer">
                 <Form
                     cancel={cancel}
                     errors={errors}

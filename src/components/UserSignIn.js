@@ -20,7 +20,7 @@ export default class UserSignIn extends Component {
         } = this.state;
 
         return (
-            <main className="container">
+            <main className="container desktopContainer">
                 <h1 className="heading heading--featured">Sign in</h1>
                 <Form
                     cancel={this.cancel}

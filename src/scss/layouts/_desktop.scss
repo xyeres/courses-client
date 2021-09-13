@@ -1,0 +1,21 @@
+@use '../abstracts/mixins';
+
+@include mixins.for-tablet-portrait-up {
+  .card {
+    margin: 1rem 2rem 1rem 0;
+  }
+
+  .container {
+    max-width: 880px;
+  }
+
+  .courseContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .desktopContainer {
+    max-width: 600px;
+  }
+
+}

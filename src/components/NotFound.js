@@ -7,7 +7,7 @@ import FourOhFourImage from '../img/courses/svgs/404-60b6.svg'
 */
 export default function NotFound() {
     return (
-        <div className="container">
+        <div className="container desktopContainer">
             <img width="450" height="250" src={FourOhFourImage} alt="404 error toilet paper roll" />
             <h1>Whoops! 404 - The requested item does not exist.</h1>
             <br />
