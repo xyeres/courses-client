@@ -1,6 +1,9 @@
 ## Courses client
 Frontend client built in React for my [Courses REST API](https://github.com/xyeres/courses-api)
 
+### Links
+- [Live site](https://vigilant-shaw-5f37f3.netlify.app/)
+
 ![](./screenshot.png)
 
 Attributions: 
