@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { Context } from '../Context';
 import errorHandler from '../errorHandler';
+import randomCourseTheme from '../utils/randomCourseTheme';
 
 /**
   * Renders a course's full details, and will conditionally
@@ -23,7 +24,11 @@ export default function CourseDetail(props) {
     useEffect(() => {
         // Get course from API
         context.data.getCourse(id)
-            .then(data => setCourse(data))
+            .then(data => {
+                let { image, color } = randomCourseTheme()
+                data[0] = { ...data[0], image, color }
+                setCourse(data)
+            })
             .catch(err => errorHandler(err, history));
     }, [context.data, id, history])
 
@@ -32,31 +37,35 @@ export default function CourseDetail(props) {
         // Loop result and render course details
         <>{course.map(c => (
             <div key={c.title}>
-                <div className="neonBlue">
+                <div className={`${c.color} courseHeader`}>
                     <header className="container">
-                        <div className="course">
-                            <div className="course__cost">Free</div>
-                            <div className="course__title">{c.title}</div>
-                            <div className="course__inlineBlockContainer">
+                        <div className="course course--flex">
+                            <div className="details">
+                                <div className="course__cost">Free</div>
+                                <div className="course__title">{c.title}</div>
                                 <div className="course__author">{c.user.firstName} {c.user.lastName}</div>
-                            </div>
-                            {
-                                c.estimatedTime ?
-                                    <div className="course__timeContainer">
-                                        <div className="course__time">{c.estimatedTime}</div>
-                                    </div>
-                                    : null
-                            }
-                            {
-                                authUser ?
-                                    authUser.id === c.user.id ? // show update and delete btns if they are the course owner
-                                        <div className="course__controls">
-                                            <Link className="edit" to={`/courses/${c.id}/update`}>Edit</Link>
-                                            <Link className="delete" to={`${c.id}/delete`}>Delete</Link>
+                                {
+                                    c.estimatedTime ?
+                                        <div className={`course__timeContainer`}>
+                                            <div className="course__time">{c.estimatedTime}</div>
                                         </div>
                                         : null
-                                    : null
-                            }
+                                }
+                                {
+                                    authUser ?
+                                        authUser.id === c.user.id ? // show update and delete btns if they are the course owner
+                                            <div className="course__controls">
+                                                <Link className="edit" to={`/courses/${c.id}/update`}>Edit</Link>
+                                                <Link className="delete" to={`${c.id}/delete`}>Delete</Link>
+                                            </div>
+                                            : null
+                                        : null
+                                }
+
+                            </div>
+                            <div className="card__picture">
+                                <img width="180" height="180" src={c.image} alt={c.title} />
+                            </div>
                         </div>
                     </header>
                 </div>
@@ -72,7 +81,7 @@ export default function CourseDetail(props) {
                         </div>
                         {
                             c.estimatedTime ?
-                                <div className="time">
+                                <div className={`time  ${c.color}`}>
                                     <div className="time__title">Estimated time:</div>
                                     <div className="time__timeCount">{c.estimatedTime}</div>
                                 </div>

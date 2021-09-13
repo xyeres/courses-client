@@ -61,9 +61,8 @@ export default function CreateCourse() {
                 <header className="container">
                     <div className="course">
                         <div className="course__title">Create course</div>
-                        <div className="course__inlineBlockContainer">
-                            <div className="course__author">{title ? `Editing "${title}"` : 'Sharing your knowledge begins here'}</div>
-                        </div>
+                        <div className="flex-break"></div>
+                        <div className="course__author">{title ? `Editing "${title}"` : 'Sharing your knowledge begins here'}</div>
                     </div>
                 </header>
             </div>
@@ -115,7 +114,7 @@ export default function CreateCourse() {
                                 type="password"
                                 value={mats}
                                 onChange={handleMatsChange}
-                                placeholder="Materials Needed" />
+                                placeholder="Materials Needed (Markdown OK)" />
                         </>
                     )} />
             </main>
