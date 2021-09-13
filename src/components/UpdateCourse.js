@@ -78,9 +78,8 @@ export default function UpdateCourse(props) {
                 <header className="container">
                     <div className="course">
                         <div className="course__title">{title ? `Update course` : `Create course`}</div>
-                        <div className="course__inlineBlockContainer">
-                            <div className="course__author">{title ? `Editing "${title}"` : 'Sharing your knowledge begins here'}</div>
-                        </div>
+                        <div className="flex-break"></div>
+                        <div className="course__author">{title ? `Editing "${title}"` : 'Sharing your knowledge begins here'}</div>
                     </div>
                 </header>
             </div>
