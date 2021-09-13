@@ -25,7 +25,11 @@ export default function Courses() {
             .then(res => {
                 if (res.status === 200) {
                     let data = res.data;
-                    // Add theme to featured course
+                    /* 
+                        Separate the courses by taking the first and making it 'featured' 
+                        This is for demonstration purposes and would not be in a production env
+                    */
+                    // Add theme to featured course:
                     let featuredCourse = data[0];
                     let { color, image } = randomCourseTheme();
                     featuredCourse = { ...featuredCourse, color, image }
@@ -63,7 +67,8 @@ export default function Courses() {
                         <h1 className="heading heading--featured">Featured course</h1>
                         <CourseList data={dataFeatured} />
                         <h3 className="heading heading--course">Most Popular</h3>
-                        <CourseList data={data} />  <NewCourse />
+                        <CourseList data={data} />
+                        <NewCourse />
                     </>
             }
         </main>
