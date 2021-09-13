@@ -36,8 +36,6 @@ export default function UpdateCourse(props) {
             })
             .then(authorID => {
                 if (String(authUser.id) !== String(authorId)) {
-                    // console.log(String(authUser.id) !== String(authorID))
-                    // console.log(String(authUser.id), String(authorID))
                     history.push('/forbidden')
                 }
             })

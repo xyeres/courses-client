@@ -60,7 +60,6 @@ export default function Courses() {
         return () => cancel();
     }, [history])
 
-    console.log(dataFeatured)
     return (
         <main className="container">
             {
