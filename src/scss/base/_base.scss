@@ -21,6 +21,16 @@ a {
   color: colors.$brightRed;
 }
 
+.flex-break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
 .btn {
   font-weight: 700;
   text-align: center;
