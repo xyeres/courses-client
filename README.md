@@ -4,7 +4,7 @@ Frontend client built in React for my [Courses REST API](https://github.com/xyer
 ### Links
 - [Live site](https://vigilant-shaw-5f37f3.netlify.app/)
 
-![](./screenshot.png)
+![](./screenshot.jpg)
 
 Attributions: 
 Background vector created by Harryarts - www.freepik.com
