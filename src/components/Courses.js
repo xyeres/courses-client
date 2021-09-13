@@ -19,7 +19,7 @@ export default function Courses() {
         // Get courses using an in-line axios call,
         // This was done for educational purposes, 
         let cancel;
-        axios.get("http://localhost:5000/api/courses", {
+        axios.get("https://courses-serve.herokuapp.com/api/courses", {
             cancelToken: new axios.CancelToken(c => cancel = c)
         })
             .then(res => {
@@ -29,19 +29,22 @@ export default function Courses() {
                         Separate the courses by taking the first and making it 'featured' 
                         This is for demonstration purposes and would not be in a production env
                     */
-                    // Add theme to featured course:
-                    let featuredCourse = data[0];
-                    let { color, image } = randomCourseTheme();
-                    featuredCourse = { ...featuredCourse, color, image }
-                    // Add theme to all other couress
-                    let popularCourses = data.slice(1, data.length)
-                    for (let i = 0; i < popularCourses.length; i++) {
-                        let { color, image } = randomCourseTheme()
-                        popularCourses[i] = { ...popularCourses[i], image, color }
+                    if (data.length) {
+                        // Add theme to featured course:
+                        let featuredCourse = data[0];
+                        let { color, image } = randomCourseTheme();
+                        featuredCourse = { ...featuredCourse, color, image }
+                        // Add theme to all other couress
+                        let popularCourses = data.slice(1, data.length)
+                        for (let i = 0; i < popularCourses.length; i++) {
+                            let { color, image } = randomCourseTheme()
+                            popularCourses[i] = { ...popularCourses[i], image, color }
+                        }
+                        // Set state
+                        setDataFeatured([featuredCourse])
+                        setData(popularCourses);
                     }
-                    // Set state
-                    setDataFeatured([featuredCourse])
-                    setData(popularCourses);
+
                 } else {
                     let err = new Error();
                     err.status = res.status;
@@ -57,6 +60,7 @@ export default function Courses() {
         return () => cancel();
     }, [history])
 
+    console.log(dataFeatured)
     return (
         <main className="container">
             {

@@ -1,5 +1,5 @@
 const config = {
-    apiBaseUrl: 'http://localhost:5000/api',
-  };
+  apiBaseUrl: 'https://courses-serve.herokuapp.com/api',
+};
 
 export default config;
