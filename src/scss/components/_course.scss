@@ -2,19 +2,17 @@
 @use '../abstracts/vars';
 
 .courseHeader {
-  min-height: 120px;
-}
-
-.courseContainer {
-  min-height: 50vh;
+  padding-top: 1rem;
+  min-height: 180px;
 }
 
 .course {
-  max-width: 90%;
   font-weight: 700;
 
-  &__inlineBlockContainer {
-    margin: 0;
+  &--flex {
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__cost {
@@ -116,9 +114,9 @@
 .time {
   max-height: 120px;
   margin: 1rem 0;
+  font-weight: 500;
   padding: 1rem;
-  color: colors.$headingLight;
-  background-color: colors.$neonBlue;
+  color: colors.$headingDark;
 
   &__timeCount {
     font-weight: 900;
