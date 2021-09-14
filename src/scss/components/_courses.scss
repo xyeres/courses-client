@@ -6,13 +6,18 @@
   margin: 0.75rem 0;
 }
 
-.heading--featured {
-  padding: 4px 7px;
-  display: inline-block;
-  font-size: 1.65rem;
-  color: colors.$headingDark;
-  background-color: colors.$headingLight;
+.featured {
+
+  &--heading {
+    padding: 4px 7px;
+    display: inline-block;
+    font-size: 1.65rem;
+    color: colors.$headingDark;
+    background-color: colors.$headingLight;
+  }
 }
+
+
 
 .heading--subtitle {
   font-size: 1.125rem;

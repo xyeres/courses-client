@@ -1,8 +1,29 @@
 @use '../abstracts/mixins';
+@use '../abstracts/colors';
 
 @include mixins.for-tablet-portrait-up {
   .card {
     margin: 1rem 2rem 1rem 0;
+    width: 390px;
+    max-height: unset;
+  }
+
+  .featured {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: solid 10px colors.$veryDarkGreen;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+
+    &--heading {
+      padding: 4px 7px;
+      display: inline-block;
+      font-size: 2.65rem;
+      color: colors.$headingDark;
+      background-color: colors.$headingLight;
+    }
   }
 
   .container {
@@ -14,6 +35,8 @@
     flex-wrap: wrap;
   }
 
+  // Used for inner pages that have forms
+  // width sensitive content
   .desktopContainer {
     max-width: 600px;
   }
