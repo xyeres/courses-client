@@ -90,12 +90,15 @@ export default function CourseDetail(props) {
                         }
                     </div>
                     {c.materialsNeeded ?
-                        <div className="materials">
-                            <div className="materials__title">Required items:</div>
-                            <ul>
-                                <ReactMarkdown>{c.materialsNeeded}</ReactMarkdown>
-                            </ul>
-                        </div>
+                        <>
+                            <div className="flex-break"></div>
+                            <div className="materials">
+                                <div className="materials__title">Required items:</div>
+                                <ul>
+                                    <ReactMarkdown>{c.materialsNeeded}</ReactMarkdown>
+                                </ul>
+                            </div>
+                        </>
                         : null
                     }
                 </main>
