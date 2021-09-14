@@ -10,9 +10,9 @@ Frontend client built in React that consumes my [Courses REST API](https://githu
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Attributions](#attributions)
 
 ## Overview
 This frontend app consumes a REST api I built. The app is a learning site called "DIY Courses" and represents a simple community driven learning site where users can register to teach and learn.
