@@ -21,7 +21,7 @@ export default class UserSignIn extends Component {
 
         return (
             <main className="container desktopContainer">
-                <h1 className="heading heading--featured">Sign in</h1>
+                <h1 className="heading featured--heading">Sign in</h1>
                 <Form
                     cancel={this.cancel}
                     errors={errors}
