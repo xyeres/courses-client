@@ -3,7 +3,11 @@ import Cookies from 'js-cookie';
 import Data from './Data';
 
 export const Context = React.createContext();
+export const Consumer = Context.Consumer;
 
+/**
+  * Global context for storing user and DB data operations
+*/
 export function Provider({ children }) {
   const data = new Data();
   const [authenticatedUser, setAuthenticatedUser] = useState(Cookies.getJSON('authenticatedUser') || null)
@@ -39,5 +43,3 @@ export function Provider({ children }) {
     </Context.Provider>
   )
 }
-
-export const Consumer = Context.Consumer;
