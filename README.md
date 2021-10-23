@@ -48,12 +48,13 @@ This project started as the final challenge in my coding bootcamp earlier this y
 - Styled from scratch with SCSS mixins and partials for oragnized, reuseable styles
 
 ### What I learned
-This project continued to strengthen my understanding of React apps and how to manage things like context, user authentication, protected routes, error handling and the React app lifecycle. 
+This project strengthened my understanding of React's Context API, user authentication, protected routes, error handling and the React app lifecycle.
 
-The most technical challenges came with user authentication and context sharing. I was able to implement this in a way that feels reliable and secure.
+The most technical challenges came with user authentication and setting up global context. I was able to implement this in a way that feels reliable and secure and I'm happy with the results.
+
 ### Useful resources
 Here are a few helpful documents that I leaned on while building out this app
-- [React Context](https://reactjs.org/docs/context.html)
+- [React Context API](https://reactjs.org/docs/context.html)
 
 ## Author
 - Be sure to [follow me on Github!](https://www.github.com/xyeres)
