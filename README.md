@@ -1,7 +1,5 @@
 # Courses Client, React frontend  
-Frontend client built in React that consumes my [Courses REST API](https://github.com/xyeres/courses-api). [Live site for this project can be found here](https://vigilant-shaw-5f37f3.netlify.app/)
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/95b801e8-1099-42dc-b3ce-ffd3679b5fa2/deploy-status)](https://app.netlify.com/sites/vigilant-shaw-5f37f3/deploys)
+Frontend client built in React that consumes my [Courses REST API](https://github.com/xyeres/courses-api)
 
 ## Table of contents
 
@@ -34,7 +32,6 @@ Users should be able to:
 ### Links
 
 - Solution Code: This repo, check out the code!
-- Live Site URL: [Live site](https://vigilant-shaw-5f37f3.netlify.app/)
 
 ## My process
 This project started as the final challenge in my coding bootcamp earlier this year. I came back to it recently to restyle it and make it feel modern and fun. I've been using a lot of SCSS lately and felt like refreshing the astetics would help. I soaked up some inspiration from Dribbble.com and dove right in. I'm fairly happy with the outcome.
